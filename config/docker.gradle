@@ -1,0 +1,24 @@
+// Task to bring up Docker Compose environment (builds images and starts containers)
+tasks.register("dockerComposeUp", Exec) {
+    group = "docker"
+    description = "Starts the Docker Compose environment (app and postgres) with the stack name 'springboot-basic-app'."
+    commandLine("docker-compose", "-p", "springboot-basic-app", "up", "--build", "-d")
+}
+
+// Task to bring down Docker Compose environment (stops and removes containers) with preserved volumes
+tasks.register("dockerComposeDown", Exec) {
+    group = "docker"
+    description = "Stops and removes the Docker Compose environment with the stack name 'springboot-basic-app' without removing volumes."
+    commandLine("docker-compose", "-p", "springboot-basic-app", "down", "--volumes")
+    // --volumes flag is removed to keep the data
+}
+
+// Combined task: Clean, build the project, then start Docker Compose
+tasks.register("buildMicroservice") {
+    group = "docker"
+    description = "Cleans, builds the project, and starts the Docker Compose environment (app & postgres)."
+    dependsOn("clean", "build", "dockerComposeDown", "dockerComposeUp")
+    doLast {
+        println("Microservice is running at http://localhost:8080")
+    }
+}
