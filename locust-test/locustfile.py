@@ -47,3 +47,6 @@ class EmployeeApiTest(HttpUser):
         response = self.client.delete("/api/v1/employees/1")
         if response.status_code == 204:
             print("Employee deleted successfully")
+
+
+# locust -f locustfile.py --host=http://localhost:8081
