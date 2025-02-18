@@ -1,4 +1,4 @@
-package com.rgonyx.springbootbasic.model;
+package com.rgonyx.springbootbatch.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,14 +13,18 @@ import lombok.NoArgsConstructor;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class Employee {
+public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
-    private String department;
-    private double salary;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String gender;
+    private String contact;
+    private String country;
+    private String dob;
 
 }

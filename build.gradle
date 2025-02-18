@@ -23,6 +23,12 @@ dependencies {
     // Flyway for database migrations
     implementation 'org.flywaydb:flyway-core'
 
+
+    // Core Spring Batch
+    implementation 'org.springframework.batch:spring-batch-core'
+    implementation 'org.springframework.batch:spring-batch-infrastructure'
+    implementation 'org.springframework.boot:spring-boot-starter-batch'
+
     // PostgreSQL JDBC driver
     implementation 'org.postgresql:postgresql:42.5.0'
 

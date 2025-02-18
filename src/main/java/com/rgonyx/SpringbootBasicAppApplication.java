@@ -1,4 +1,4 @@
-package com.rgonyx.springbootbasic;
+package com.rgonyx;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringbootBasicAppApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringbootBasicAppApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringbootBasicAppApplication.class, args);
+    }
 }

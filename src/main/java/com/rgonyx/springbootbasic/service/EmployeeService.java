@@ -1,6 +1,6 @@
 package com.rgonyx.springbootbasic.service;
 
-import com.rgonyx.springbootbasic.model.Employee;
+import com.rgonyx.springbootbasic.entity.Employee;
 import com.rgonyx.springbootbasic.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

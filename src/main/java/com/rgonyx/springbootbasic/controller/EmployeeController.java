@@ -1,6 +1,6 @@
 package com.rgonyx.springbootbasic.controller;
 
-import com.rgonyx.springbootbasic.model.Employee;
+import com.rgonyx.springbootbasic.entity.Employee;
 import com.rgonyx.springbootbasic.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

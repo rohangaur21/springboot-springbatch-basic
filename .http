@@ -27,3 +27,19 @@ Content-Type: application/json
 
 ### Delete an employee
 DELETE http://localhost:8081/api/v1/employees/1
+
+### Generate Customer Data with custom file name
+GET http://localhost:8081/api/v1/customer/generateData
+Accept: application/json
+
+### Clear Customer Datain DB
+DELETE http://localhost:8081/api/v1/customer/clear
+Accept: application/json
+
+
+### Import Customer Data in DB
+POST http://localhost:8081/api/v1/jobs/importCustomers
+Content-Type: application/json
+
+{
+}
