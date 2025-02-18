@@ -35,7 +35,7 @@ public class CustomerDataGeneratorUtils {
             String[] countries = {"USA", "Canada", "UK", "Australia", "India"};
             Random random = new Random();
 
-            for (int i = 1; i <= 10000; i++) {
+            for (int i = 1; i <= 1000; i++) {
                 String firstName = firstNames[random.nextInt(firstNames.length)];
                 String lastName = lastNames[random.nextInt(lastNames.length)];
                 String email = generateEmail(firstName, lastName);
