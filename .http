@@ -1,0 +1,45 @@
+### Create a new employee
+POST http://localhost:8081/api/v1/employees
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "position": "Software Engineer",
+  "salary": 70000
+}
+
+### Get all employees
+GET http://localhost:8081/api/v1/employees
+
+### Get employee by ID
+GET http://localhost:8081/api/v1/employees/1
+
+### Update an existing employee
+PUT http://localhost:8081/api/v1/employees/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "John Doe Updated",
+  "position": "Senior Software Engineer",
+  "salary": 90000
+}
+
+### Delete an employee
+DELETE http://localhost:8081/api/v1/employees/1
+
+### Generate Customer Data with custom file name
+GET http://localhost:8081/api/v1/customer/generateData
+Accept: application/json
+
+### Clear Customer Datain DB
+DELETE http://localhost:8081/api/v1/customer/clear
+Accept: application/json
+
+
+### Import Customer Data in DB
+POST http://localhost:8081/api/v1/jobs/importCustomers
+Content-Type: application/json
+
+{
+}
